@@ -1,5 +1,5 @@
 class Vendor < ApplicationRecord
-	has_many :projects_vendor
-	has_many :project, through: :projects_vendor
+	has_many :projects_vendors
+	has_many :projects, through: :projects_vendors
 
 end

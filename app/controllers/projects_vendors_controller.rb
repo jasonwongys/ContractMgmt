@@ -8,9 +8,9 @@ class ProjectsVendorsController < ApplicationController
   end
 
   def bid
-    project = Project.find(params[:projects_vendor][:project_id])
+    project = Project.find(params[:projects_vendors][:project_id])
     
-    vendor = Vendor.find(params[:projects_vendor][:vendor_id])
+    vendor = Vendor.find(params[:projects_vendors][:vendor_id])
 
     project.vendors << vendor
 

@@ -16,10 +16,10 @@
   <tbody>
     <% @projects_vendors.each do |projects_vendor| %>
       <tr>
-        <td><%= projects_vendor.project.scope %></td>
-        <td><%= projects_vendor.vendor.name %></td>
-        <td><%= projects_vendor.project.description %></td>
-        
+        <td><%= projects_vendors.project.scope %></td>
+        <td><%= projects_vendors.vendor.name %></td>
+        <td><%= projects_vendors.project.description %></td>
+
         <td><%= link_to 'Show', projects_vendor %></td>
         <td><%= link_to 'Edit', edit_projects_vendor_path(projects_vendor) %></td>
         <td><%= link_to 'Destroy', projects_vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>

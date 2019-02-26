@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post 'projects_vendors/bid' => 'projects_vendors#bid'
 
   get '/projects/:projects_id/vendors' => 'vendors#index', as: 'project_vendors'
-  get '/projects/:projects_id/vendors/new' => 'vendors#create', as: 'new_projects_vendors'
+  #get '/projects/:projects_id/vendors/new' => 'vendors#create', as: 'new_projects_vendors'
   post '/projects/:projects_id/vendors' => 'vendors#create'
 
 
