@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scope: MyString
+  status: MyString
+  closure: 2019-02-22
+  description: MyString
+
+two:
+  scope: MyString
+  status: MyString
+  closure: 2019-02-22
+  description: MyString

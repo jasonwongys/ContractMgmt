@@ -1,0 +1,28 @@
+<%= form_with scope: :projects, url: projects_path, local: true do |form| %>
+
+<%= form.collection_check_boxes :vendor_id, @vendor, :id, :name %>
+
+  <div class="field">
+    <%= form.label :scope %>
+    <%= form.text_field :scope %>
+  </div>
+
+  <div class="field"> 
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closure %>
+    <%= form.date_select :closure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

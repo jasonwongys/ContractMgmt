@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projects Vendors</h1>
+
+<table>
+  <thead>
+    <h1> All Bidded Projects </h1>
+    <tr>
+      <th>Project</th>
+      <th>Vendor</th>
+      <th>Project Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects_vendors.each do |projects_vendor| %>
+      <tr>
+        <td><%= projects_vendor.project.scope %></td>
+        <td><%= projects_vendor.vendor.name %></td>
+        <td><%= projects_vendor.project.description %></td>
+        
+        <td><%= link_to 'Show', projects_vendor %></td>
+        <td><%= link_to 'Edit', edit_projects_vendor_path(projects_vendor) %></td>
+        <td><%= link_to 'Destroy', projects_vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<br>
+
+<%= link_to 'Make a Bid', new_projects_vendor_path %>

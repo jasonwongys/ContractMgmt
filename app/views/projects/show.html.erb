@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scope:</strong>
+  <%= @project.scope %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project.status %>
+</p>
+
+<p>
+  <strong>Closure:</strong>
+  <%= @project.closure %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %> |
+<%= link_to 'New Projects Vendor', new_projects_vendor_path %>

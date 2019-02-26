@@ -1,0 +1,28 @@
+
+<%= form_with scope: :projects_vendors, url: '/projects_vendors/bid', local: true do |form| %>
+
+<%= form.collection_select :project_id, @project, :id, :scope %> 
+<br>
+<br> 
+<%= form.label :Vendor_name %>
+<%= form.collection_select :vendor_id, @vendor, :id, :name %>
+<br>
+<br>
+
+  <div class="field">
+    <%= form.label :bidPrice %>
+    <%= form.number_field :bidPrice %>
+  </div>
+<br>
+
+
+  <div class="form-group">
+    <%= form.label :upload_contract %>
+    <%= form.file_field :file %>
+  </div>
+<br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

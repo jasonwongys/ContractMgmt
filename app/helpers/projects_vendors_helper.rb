@@ -1,0 +1,2 @@
+module ProjectsVendorsHelper
+end

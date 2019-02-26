@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bidprice:</strong>
+  <%= @projects_vendor.bidPrice %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @projects_vendor.project.scope %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @projects_vendor.vendor.name %>
+</p>
+
+<%= link_to 'Edit', edit_projects_vendor_path(@projects_vendor) %> |
+<%= link_to 'Back', projects_vendors_path %>
