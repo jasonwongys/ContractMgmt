@@ -22,7 +22,7 @@ class ProjectsVendorsController < ApplicationController
   # GET /projects_vendors/1
   # GET /projects_vendors/1.json
   def show
-    @projects_vendors = ProjectsVendor.all
+    @projects_vendor = ProjectsVendor.all
   end
 
   # GET /projects_vendors/new
@@ -84,7 +84,7 @@ class ProjectsVendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def projects_vendor_params
-      params.require(:projects_vendor).permit(:bidPrice, :file, :project_ids => [], :vendor_ids => [])
+      params.require(:projects_vendor).permit( :bidPrice, :file, :project_ids => [], :vendor_ids => [])
       
     end
 end

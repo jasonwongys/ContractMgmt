@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   # view the vendor info and credentials
 
   post 'projects_vendors/bid' => 'projects_vendors#bid', as: 'new_projects_vendors'
+  #get '/projects_vendors/:id' => 'projects_vendors#show' , as: 'projects_vendor'
 
-
-  get '/projects/:projects_id/vendors' => 'vendors#index', as: 'project_vendors'
+  #get '/projects/:projects_id/vendors' => 'vendors#index', as: 'project_vendors'
   #get '/projects/:projects_id/vendors/new' => 'vendors#create', as: 'new_projects_vendors'
   #post '/projects/:projects_id/vendors' => 'vendors#create'
 

@@ -1,16 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_with scope: :projects_vendors, url: projects_vendor_path, local: true do |form| %>
 
+	<p>
+	  <strong>Bidprice:</strong>
+	  <%= @projects_vendors.bidPrice %>
+	</p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @projects_vendors.projects.scope %>
-</p>
+	<p>
+	  <strong>Project:</strong>
+	  <%= @projects_vendors.project.scope %>
+	</p>
 
-<p>
-  <strong>Vendor:</strong>
-  <%= @projects_vendors.vendors.name %>
-</p>
+	<p>
+	  <strong>Vendor:</strong>
+	  <%= @projects_vendors.vendor.name %>
+	</p>
+<% end %>
 
 <%= link_to 'Edit', edit_projects_vendor_path(@projects_vendor) %> |
 <%= link_to 'Back', projects_vendors_path %>
