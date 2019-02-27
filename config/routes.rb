@@ -5,16 +5,15 @@ Rails.application.routes.draw do
   resources :vendors
   root 'onepage#index'
 
-  
-
   # User perspective to approve/award the project to vendor
   # view the vendor info and credentials
 
-  post 'projects_vendors/bid' => 'projects_vendors#bid'
+  post 'projects_vendors/bid' => 'projects_vendors#bid', as: 'new_projects_vendors'
+
 
   get '/projects/:projects_id/vendors' => 'vendors#index', as: 'project_vendors'
   #get '/projects/:projects_id/vendors/new' => 'vendors#create', as: 'new_projects_vendors'
-  post '/projects/:projects_id/vendors' => 'vendors#create'
+  #post '/projects/:projects_id/vendors' => 'vendors#create'
 
 
   # Vendors perspective to bid for the project

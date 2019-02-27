@@ -1,5 +1,5 @@
 class ProjectsVendor < ApplicationRecord
-  belongs_to :projects
-  belongs_to :vendors
+  belongs_to :project
+  belongs_to :vendor
   has_one_attached :file
 end

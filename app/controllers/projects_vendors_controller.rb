@@ -11,17 +11,18 @@ class ProjectsVendorsController < ApplicationController
     project = Project.find(params[:projects_vendors][:project_id])
     
     vendor = Vendor.find(params[:projects_vendors][:vendor_id])
-
+    
     project.vendors << vendor
 
-    render plain: params.inspect
+    redirect_to projects_vendors_path
+   
   end
   
 
   # GET /projects_vendors/1
   # GET /projects_vendors/1.json
   def show
-    @projects = Project.all
+    @projects_vendors = ProjectsVendor.all
   end
 
   # GET /projects_vendors/new
@@ -68,7 +69,7 @@ class ProjectsVendorsController < ApplicationController
   # DELETE /projects_vendors/1
   # DELETE /projects_vendors/1.json
   def destroy
-    @projects_vendor.destroy
+    @projects_vendors.destroy
     respond_to do |format|
       format.html { redirect_to projects_vendors_url, notice: 'Projects vendor was successfully destroyed.' }
       format.json { head :no_content }
