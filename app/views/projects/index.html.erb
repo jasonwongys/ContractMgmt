@@ -1,33 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
-
 <table>
   <thead>
-    <tr>
-      <th>Scope</th>
-      <th>Status</th>
-      <th>Closure</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
+    <h1>Projects Index</h1>
   </thead>
 
+  </table>
+
+  <%= link_to 'New Project', new_project_path, class:"btn btn-success" %>
+  <p></p>
+
+<div class=section>
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.scope %></td>
-        <td><%= project.status %></td>
-        <td><%= project.closure %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <div class="card w-75">
+        <div class="card-body">
+          <h4>Scope</h4><td><%= project.scope %></td>
+          <h4>Status</h4><td><%= project.status %></td>
+          <h4>Closure Date</h4><td><%= project.closure %></td>
+          <h4>Project Description</h4><td><%= project.description %></td>
+
+          <p>
+            <%= link_to 'Show', project, class: "btn btn-primary" %>
+            <%= link_to 'Edit', edit_project_path(project), class: "btn btn-primary" %>
+            <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+            
+          </p>
+        </div>
+      </div>
       </tr>
     <% end %>
   </tbody>
-</table>
+</div>
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+

@@ -1,6 +1,6 @@
 <%= form_with scope: :projects, url: projects_path, local: true do |form| %>
 
-<%= form.collection_check_boxes :vendor_id, @vendor, :id, :name %>
+
 
   <div class="field">
     <%= form.label :scope %>
@@ -9,7 +9,11 @@
 
   <div class="field"> 
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.select(:status, raw('
+      <option value="Open">Open</option>
+      <option value="Closed">Closed</option>
+      <option value="Awarded">Awarded</option>')) %>
+
   </div>
 
   <div class="field">

@@ -11,11 +11,19 @@ class ProjectsVendorsController < ApplicationController
     project = Project.find(params[:projects_vendors][:project_id])
     
     vendor = Vendor.find(params[:projects_vendors][:vendor_id])
-    
+
+    #bid = ProjectsVendor.find(params[projects_vendors][:bidPrice])
+
     project.vendors << vendor
 
+    #project.vendors << bid
+
+    #newbid = ProjectsVendor.new(projects_vendor_params)
+
     redirect_to projects_vendors_path
-   
+
+
+   #render plain: params.inspect
   end
   
 
@@ -34,6 +42,9 @@ class ProjectsVendorsController < ApplicationController
 
   # GET /projects_vendors/1/edit
   def edit
+    @projects_vendor = ProjectsVendor.find(params[:id])
+    @project = Project.all
+    @vendor = Vendor.all
   end
 
   # POST /projects_vendors
@@ -84,7 +95,7 @@ class ProjectsVendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def projects_vendor_params
-      params.require(:projects_vendor).permit( :bidPrice, :file, :project_ids => [], :vendor_ids => [])
+      params.require(:projects_vendor).permit(:bidPrice, :file, :project_ids => [], :vendor_ids => [])
       
     end
 end

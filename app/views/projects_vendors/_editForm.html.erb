@@ -1,0 +1,26 @@
+<%= form_with scope: :projects_vendor, model: @projects_vendor, local: true do |form| %>
+
+  <p>
+    <%= form.label :bidPrice  %>
+    <%= form.text_field :bidPrice %>
+  </p>
+
+  <p>
+    <%= form.label :Vendor_name %>
+    <%= form.text_field :projects_vendor.vendor.name %>
+  </p>
+
+      <div class="field"> 
+    <%= form.label :Award_Status %>
+    <%= form.select(:isAwarded, raw('
+      <option value="Not_Awarded">Not Awarded</option>
+      <option value="Awarded">Awarded</option>')) %>
+    </div>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', projects_vendor_path %>

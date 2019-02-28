@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vendors</h1>
+<h1>Vendors Main Page</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
+      <th>Company Profile</th>
+      <th>Certification</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +16,8 @@
     <% @vendors.each do |vendor| %>
       <tr>
         <td><%= vendor.name %></td>
+        <td><%= vendor.profile %></td>
+        <td><%= vendor.certifications %></td>
         <td><%= link_to 'Show', vendor %></td>
         <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
         <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
