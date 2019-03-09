@@ -14,8 +14,9 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-      <div class="card w-75">
-        <div class="card-body">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
           <h4>Scope</h4><td><%= project.scope %></td>
           <h4>Status</h4><td><%= project.status %></td>
           <h4>Closure Date</h4><td><%= project.closure %></td>
@@ -25,8 +26,8 @@
             <%= link_to 'Show', project, class: "btn btn-primary" %>
             <%= link_to 'Edit', edit_project_path(project), class: "btn btn-primary" %>
             <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-            
           </p>
+        </div>
         </div>
       </div>
       </tr>
