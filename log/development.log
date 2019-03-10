@@ -22379,3 +22379,12 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2019-03-09 22:00:28 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
