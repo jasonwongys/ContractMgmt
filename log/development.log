@@ -22460,3 +22460,42 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 22:52:54 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 52ms (Views: 44.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 22:54:58 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/jasonw/Desktop/projects/wdi-17/project-4/webpacker/contract/app/views/projects/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/jasonw/Desktop/projects/wdi-17/project-4/webpacker/contract/app/views/projects/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/jasonw/Desktop/projects/wdi-17/project-4/webpacker/contract/app/views/projects/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/projects/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/projects/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/projects/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 22:55:34 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.8ms)
+
+

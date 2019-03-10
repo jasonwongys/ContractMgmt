@@ -1,26 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
+<div class="title-container">
+
     <h1>Projects Index</h1>
-  </thead>
+      <%= link_to 'New Project', new_project_path, class:"btn btn-success" %>
+</div>
 
-  </table>
-
-  <%= link_to 'New Project', new_project_path, class:"btn btn-success" %>
-  <p></p>
-
-<div class=section>
-  <tbody>
+<div class="projects">
     <% @projects.each do |project| %>
-      <tr>
-      <div class="card-deck">
+
+      <div class="project">
         <div class="card">
-          <div class="card-body">
-          <h4>Scope</h4><td><%= project.scope %></td>
-          <h4>Status</h4><td><%= project.status %></td>
-          <h4>Closure Date</h4><td><%= project.closure %></td>
-          <h4>Project Description</h4><td><%= project.description %></td>
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Scope</h4><%= project.scope %>
+              <h4>Status</h4><%= project.status %>
+              <h4>Closure Date</h4><%= project.closure %>
+              <h4>Project Description</h4><%= truncate(project.description, length:150) %>
 
           <p>
             <%= link_to 'Show', project, class: "btn btn-primary" %>
@@ -30,9 +26,9 @@
         </div>
         </div>
       </div>
-      </tr>
+  
     <% end %>
-  </tbody>
+  
 </div>
 
 <br>
