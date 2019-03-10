@@ -1,6 +1,9 @@
-<h1>Editing Project</h1>
+<div class="title-container">
 
-<%= render 'form', project: @project %>
+	<h1>Editing Project</h1>
+</div>
+
+<%= render partial: 'form', project: @project %>
 
 <%= link_to 'Show', @project %> |
 <%= link_to 'Back', projects_path %>

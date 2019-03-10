@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div class="title-container">
+	
+</div>
 <p>
   <strong>Scope:</strong>
   <%= @project.scope %>
@@ -19,6 +22,8 @@
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %> |

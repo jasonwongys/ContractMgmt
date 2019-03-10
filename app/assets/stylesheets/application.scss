@@ -1,6 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	background-color: #5DD9C1;
+	font-family: Lato;
+
+}
+
+.container {
+	background-color: #122C34;
+	color: white;
+}
 
 .title-container {
 	display: flex;
@@ -8,8 +18,20 @@
 	align-items: center;
 	margin-bottom: 20px;
 
+
+
+	h1 {
+		margin: 0;
+	}
 }
 
-h1 {
-	margin: 0 auto;
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.project {
+	width: 20%;
+		min-width: 350px;
 }

@@ -2,12 +2,12 @@
 
 
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :scope %>
-    <%= form.text_field :scope %>
+    <%= form.text_field :scope, class: "form-control" %>
   </div>
 
-  <div class="field"> 
+  <div class="form-group"> 
     <%= form.label :status %>
     <%= form.select(:status, raw('
       <option value="Open">Open</option>
@@ -16,17 +16,17 @@
 
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :closure %>
     <%= form.date_select :closure %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

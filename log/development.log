@@ -22499,3 +22499,513 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 22:59:12 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 930ms (Views: 927.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:00:49 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 1035ms (Views: 1032.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:01:49 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 890ms (Views: 887.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:02:40 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:02:42 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:04:12 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:04:13 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2019-03-10 23:04:24 +0800
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (17.6ms)
+  Rendered projects/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 88ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2019-03-10 23:05:09 +0800
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4BzC/PUmfTtJbhzbho3Q+ScP5/5AkzSMFPt0ODy6r7ZEMFeqfFekpGDl4yHj1OnslbimA+Y2Us+TJxJj+Z/GQ==", "projects"=>{"scope"=>"Toilet Maintenance Work", "status"=>"Open", "closure(1i)"=>"2019", "closure(2i)"=>"3", "closure(3i)"=>"10", "description"=>"Contract value at $200K"}, "commit"=>"Save Projects"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:32
+  [1m[36mProject Create (1.1ms)[0m  [1m[32mINSERT INTO "projects" ("scope", "status", "closure", "description") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["scope", "Toilet Maintenance Work"], ["status", "Open"], ["closure", "2019-03-10"], ["description", "Contract value at $200K"]]
+  ↳ app/controllers/projects_controller.rb:32
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:32
+Redirected to http://localhost:3000/projects/8
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/projects/8" for 127.0.0.1 at 2019-03-10 23:05:09 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:05:14 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:08:20 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 945ms (Views: 942.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:08:21 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:08:33 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 895ms (Views: 885.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:08:40 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 919ms (Views: 916.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:08:53 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 886ms (Views: 883.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:09:10 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 902ms (Views: 899.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/7/edit" for 127.0.0.1 at 2019-03-10 23:09:31 +0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.4ms)
+  Rendered projects/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 86ms (Views: 78.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:14:14 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2019-03-10 23:14:16 +0800
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2019-03-10 23:14:37 +0800
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5brm3xew+R11fbQfazjNoARykwBq+niXJV419rFVix+LKlSKTZU+ewnbm+CCralEUrhOB5xg7Q4rQURv3kEeuA==", "projects"=>{"scope"=>"", "status"=>"Open", "closure(1i)"=>"2019", "closure(2i)"=>"3", "closure(3i)"=>"10", "description"=>""}, "commit"=>"Save Projects"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:32
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("scope", "status", "closure", "description") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["scope", ""], ["status", "Open"], ["closure", "2019-03-10"], ["description", ""]]
+  ↳ app/controllers/projects_controller.rb:32
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:32
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 38ms (ActiveRecord: 30.7ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2019-03-10 23:14:37 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:14:42 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/projects/9" for 127.0.0.1 at 2019-03-10 23:14:47 +0800
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R5RURhj7bTxn09A0TV8hzWzZdrCKbDvEcVu27H4qHQEpBOYTQt6qWht1/8ukykUpOhOrt3z2rl1/RMd1ET6Ipg==", "id"=>"9"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:59
+  [1m[36mProject Destroy (30.2ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/projects_controller.rb:59
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:59
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 41ms (ActiveRecord: 33.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:14:47 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:18:40 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2019-03-10 23:18:44 +0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.6ms)
+  Rendered projects/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2019-03-10 23:18:58 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2019-03-10 23:19:02 +0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.0ms)
+  Rendered projects/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2019-03-10 23:19:04 +0800
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (11.3ms)
+  Rendered projects/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2019-03-10 23:19:08 +0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.2ms)
+  Rendered projects/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2019-03-10 23:19:28 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2019-03-10 23:19:56 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2019-03-10 23:20:17 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:69
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects_vendors" for 127.0.0.1 at 2019-03-10 23:22:07 +0800
+Processing by ProjectsVendorsController#index as HTML
+  Rendering projects_vendors/index.html.erb within layouts/application
+  [1m[36mProjectsVendor Load (0.7ms)[0m  [1m[34mSELECT "projects_vendors".* FROM "projects_vendors"[0m
+  ↳ app/views/projects_vendors/index.html.erb:13
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.7ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  Rendered projects_vendors/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 79ms (Views: 60.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/projects_vendors/1" for 127.0.0.1 at 2019-03-10 23:22:11 +0800
+Processing by ProjectsVendorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjectsVendor Load (0.8ms)[0m  [1m[34mSELECT  "projects_vendors".* FROM "projects_vendors" WHERE "projects_vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_vendors_controller.rb:93
+  Rendering projects_vendors/show.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/show.html.erb:13
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/show.html.erb:18
+  Rendered projects_vendors/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects_vendors" for 127.0.0.1 at 2019-03-10 23:35:29 +0800
+Processing by ProjectsVendorsController#index as HTML
+  Rendering projects_vendors/index.html.erb within layouts/application
+  [1m[36mProjectsVendor Load (0.7ms)[0m  [1m[34mSELECT "projects_vendors".* FROM "projects_vendors"[0m
+  ↳ app/views/projects_vendors/index.html.erb:13
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.4ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.4ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  Rendered projects_vendors/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 945ms (Views: 935.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:35:38 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:39:10 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 939ms (Views: 935.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:39:52 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 912ms (Views: 909.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vendors" for 127.0.0.1 at 2019-03-10 23:39:59 +0800
+Processing by VendorsController#index as HTML
+  Rendering vendors/index.html.erb within layouts/application
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/views/vendors/index.html.erb:16
+  Rendered vendors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:40:03 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:40:15 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 900ms (Views: 897.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:42:30 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 929ms (Views: 927.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:43:01 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 910ms (Views: 907.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-03-10 23:43:21 +0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects_vendors" for 127.0.0.1 at 2019-03-10 23:43:22 +0800
+Processing by ProjectsVendorsController#index as HTML
+  Rendering projects_vendors/index.html.erb within layouts/application
+  [1m[36mProjectsVendor Load (0.3ms)[0m  [1m[34mSELECT "projects_vendors".* FROM "projects_vendors"[0m
+  ↳ app/views/projects_vendors/index.html.erb:13
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mCACHE Vendor Load (0.0ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:17
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/projects_vendors/index.html.erb:18
+  Rendered projects_vendors/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vendors" for 127.0.0.1 at 2019-03-10 23:43:31 +0800
+Processing by VendorsController#index as HTML
+  Rendering vendors/index.html.erb within layouts/application
+  [1m[36mVendor Load (1.1ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/views/vendors/index.html.erb:16
+  Rendered vendors/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 1.1ms)
+
+
