@@ -15,7 +15,7 @@
             <div class="caption">
               <h4>Scope</h4><%= project.scope %>
               <h4>Status</h4><%= project.status %>
-              <h4>Closure Date</h4><%= project.closure %>
+              <h4>Closure Date</h4><%= localize(project.closure) %>
               <h4>Project Description</h4><%= truncate(project.description, length:150) %>
 
           <p>

@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<table>
   <div class="title-container">
-    <thead>
+
       <h1> Projects Listing </h1>
-    
-    </thead>
+  
   </div>
-</table>
+<%= link_to 'Make a Bid', new_projects_vendor_path, class: "btn btn-success" %>
 <div class="bids_section">
   <tbody>
     <% @projects_vendors.each do |projects_vendor| %>
       <tr>
-        <div class="card w-75">
-          <div class="card-body">
+        <div class="thumbnail">
+          <div class="caption">
             <h4>Project</h4><td><%= projects_vendor.project.scope %></td>
             <h4>Vendor</h4><td><%= projects_vendor.vendor.name %></td>
             <h4>Project Description</h4><td><%= projects_vendor.project.description %></td>
@@ -33,4 +31,4 @@
 
 <br>
 
-<%= link_to 'Make a Bid', new_projects_vendor_path %>
+
