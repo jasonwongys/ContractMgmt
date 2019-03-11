@@ -1,19 +1,17 @@
+ <div class="title-container">
 <%= form_with scope: :projects, url: projects_path, local: true do |form| %>
-
-
+</div>
 
   <div class="form-group">
     <%= form.label :scope %>
     <%= form.text_field :scope, class: "form-control" %>
   </div>
 
-  <div class="form-group"> 
-    <%= form.label :status %>
-    <%= form.select(:status, raw('
-      <option value="Open">Open</option>
-      <option value="Closed">Closed</option>
-      <option value="Awarded">Awarded</option>')) %>
-
+  <div class="control-group"> 
+            <%= form.label :status, class: "control-label" %>
+      <div class="controls">
+            <%= form.select(:status, options_for_select([['Open','OPEN'],['Pending','PENDING']]), {inclide_blank: true }) %>
+      </div>
   </div>
 
   <div class="form-group">

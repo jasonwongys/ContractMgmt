@@ -1,35 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="title-container">
-
     <h1>Projects Index</h1>
       <%= link_to 'New Project', new_project_path, class:"btn btn-success" %>
 </div>
 
-<div class="projects">
-    <% @projects.each do |project| %>
-
-      <div class="project">
-
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="projects">
+        <% @projects.each do |project| %>
+        <div class="project">
           <div class="thumbnail">
             <div class="caption">
-              <h4>Scope</h4><%= project.scope %>
-              <h4>Status</h4><%= project.status %>
-              <h4>Closure Date</h4><%= localize(project.closure) %>
-              <h4>Project Description</h4><%= truncate(project.description, length:150) %>
-
+          <div class="card">
+              <h4 class="card-text">Scope</h4><%= project.scope %>
+              <h4 class="card-text">Status</h4><%= project.status %>
+              <h4 class="card-text">Closure Date</h4><%= localize(project.closure) %>
+              <h4 class="card-text">Project Description</h4><%= truncate(project.description, length:150) %>
           <p>
             <%= link_to 'Show', project, class: "btn btn-primary" %>
             <%= link_to 'Edit', edit_project_path(project), class: "btn btn-primary" %>
             <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
           </p>
-        
+          </div>
         </div>
       </div>
-  
-    <% end %>
-  
+        </div>
+        <% end %>       
+      </div>
+    </div>
+  </div>
 </div>
-
-
 

@@ -1,31 +1,28 @@
 <p id="notice"><%= notice %></p>
 
   <div class="title-container">
-
-      <h1> Projects Listing </h1>
-  
+      <h1> Projects Biddings </h1>
   </div>
 <%= link_to 'Make a Bid', new_projects_vendor_path, class: "btn btn-success" %>
 <div class="bids_section">
-  <tbody>
+
     <% @projects_vendors.each do |projects_vendor| %>
-      <tr>
+  
         <div class="thumbnail">
           <div class="caption">
-            <h4>Project</h4><td><%= projects_vendor.project.scope %></td>
-            <h4>Vendor</h4><td><%= projects_vendor.vendor.name %></td>
-            <h4>Project Description</h4><td><%= projects_vendor.project.description %></td>
+            <h4>Project</h4><%= projects_vendor.project.scope %>
+            <h4>Bid Submitted By: </h4><%= projects_vendor.vendor.name %>
+            <h4>Status</h4><%= projects_vendor.project.status %>
+            <h4>Project Description</h4><%= projects_vendor.project.description %>
 
             <p>
                 <%= link_to 'Show', projects_vendor, class: "btn btn-primary" %>
-                <%= link_to 'Edit', edit_projects_vendor_path(projects_vendor),class: "btn btn-primary" %>
-                <%= link_to 'Destroy', projects_vendor, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
             </p>
           </div>
         </div>
-      </tr>
+    
     <% end %>
-  </tbody>
+
 </div>
 
 

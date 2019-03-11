@@ -1,30 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="title-container">
-	
+	<h2> View Specific Project </h2>
 </div>
 <p>
-  <strong>Scope:</strong>
-  <%= @project.scope %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @project.status %>
-</p>
-
-<p>
-  <strong>Closure:</strong>
-  <%= @project.closure %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
+  <h3>Scope: <%= @project.scope %></h3>
+  
 </p>
 
 
+<div class="thumbnail">
+	<div class="caption">
+		<p>
+			<strong>Status:</strong>
+			<%= @project.status %>
+		</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %> |
-<%= link_to 'New Projects Vendor', new_projects_vendor_path %>
+		<p>
+		  <strong>Closure:</strong>
+		  <%= @project.closure %>
+		</p>
+
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+
+  	</div>
+</div>
+
+
+<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary" %> 
+<%= link_to 'Back', projects_path, class: "btn btn-primary" %> 
+<%= link_to 'New Projects Vendor', new_projects_vendor_path, class: "btn btn-primary" %>

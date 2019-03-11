@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_with scope: :projects_vendors, url: projects_vendor_path, local: true do |form| %>
-<h2> View Specific Bid </h2>
+   <div class="thumbnail">
+       <div class="caption">
+		<%= form_with scope: :projects_vendors, url: projects_vendor_path, local: true do |form| %>
+		<h2> View Specific Bid </h2>
 
 	<p>
 	  <strong>Bidprice: $</strong>
@@ -18,11 +20,10 @@
 	  <%= @projects_vendors.vendor.name %>
 	</p>
 
-
+	</div>
+</div>
 
 <% end %>
 
 
-
-<%= link_to 'Edit', edit_projects_vendor_path(@projects_vendor) %> |
-<%= link_to 'Back', projects_vendors_path %>
+<%= link_to 'Back', projects_vendors_path, class: "btn btn-primary" %>

@@ -1,16 +1,17 @@
-
-<%= form_with scope: :projects_vendors, url: '/projects_vendors/bid', local: true do |form| %>
-
-<%= form.collection_select :project_id, @project, :id, :scope %> 
+<div class="thumbnail">
+  <div class="caption">
+    <h4> Select the project to bid</h4>
+    <%= form_with scope: :projects_vendors, url: '/projects_vendors/bid', local: true do |form| %>
+    <%= form.collection_select :project_id, @project, :id, :scope %> 
 <br>
 <br> 
-<%= form.label :Vendor_name %>
-<%= form.collection_select :vendor_id, @vendor, :id, :name %>
+    <%= form.label :Vendor_name %>
+    <%= form.collection_select :vendor_id, @vendor, :id, :name %>
 <br>
 <br>
 
   <div class="form-group">
-    <%= form.label :bidPrice %>$
+    <%= form.label :bidPrice %> $ 
     <%= form.text_field :bidPrice %>
   </div>
 <br>
@@ -24,4 +25,6 @@
   <div class="actions">
     <%= form.submit class: "btn btn-primary" %>
   </div>
+</div>
+</div>
 <% end %>
